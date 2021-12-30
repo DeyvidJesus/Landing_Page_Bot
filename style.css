@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+*, a, p{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Sarala', sans-serif;
+}
+
+body{
+    font-size: 100%;
+    background: rgb(11,20,38);
+    background: linear-gradient(75deg, rgba(11,20,38,1) 0%, rgba(44,60,88,1) 57%, rgba(236,204,139,1) 100%);
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px;
+}
+
+.header-imagem{
+    height: 72px;
+    border-radius: 50px;
+}
+
+#botao-mobile{
+    display: none;
+    visibility: hidden;
+    background: transparent;
+    border: none;
+}
+
+#header-nav{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-item{
+    color: white;
+}
+
+.nav-item:hover{
+    text-decoration: underline;
+}
+
+.conteudo{
+    border-top: 0.4px solid #FFF2E7;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.conteudo-principal{
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#conteudo-principal-titulo{
+    color: #FFF2E7;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Righteous', cursive;
+    font-size: 64px;
+}
+
+#conteudo-principal-msg{
+    font-style: normal;
+    font-weight: normal;
+    color: #f1cc80;
+    font-size: 24px;
+}
+
+#conteudo-principal-container-botoes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteudo-principal-botao{
+    width: 150px;
+    height: 50px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border-style: none;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
+
+.conteudo-principal-botao:first-child{
+    background: #ECCC8B;
+    color: black;
+}
+
+.conteudo-principal-botao:first-child:hover{
+    cursor: pointer;
+    background: #b39a68;
+}
+
+.conteudo-principal-botao:nth-child(2){
+    background: #0B1426;
+}
+
+.conteudo-principal-botao:nth-child(2):hover{
+    background: #070d1a;
+    cursor: pointer;
+    color: rgb(224, 222, 222);
+}
+
+#conteudo-principal-imagem{
+    height: 350px;
+}
+
+.conteudo-secundario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0;
+}
+
+#conteudo-secundario-titulo{
+    border-top: 0.4px solid #FFF2E7;
+    padding-top: 48px;
+    font-family: 'Righteous', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    color: #FFF2E7;
+}
+
+#conteudo-secundario-lista{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-item{
+    font-style: normal;
+    font-weight: normal;
+    padding: 15px;
+    color: #ECD6C4;
+}
+
+.rodape{
+    border-top: 0.4px solid #FFF2E7;
+}
+
+#rodape-titulo{
+    margin: 48px 0;
+    font-family: 'Itim', cursive;
+    color: #ECCC8B;
+    text-align: center;
+    font-size: 70px;
+}
+
+@media (max-width: 1024px){
+    #conteudo-principal-imagem{
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px){
+    .conteudo{
+        gap: 90px;
+    }
+
+    #conteudo-principal-msg{
+        margin-left: 13%;
+    }
+
+    .conteudo-principal{
+        align-items: center;
+    }
+
+    #conteudo-principal-imagem{
+        height: 250px;
+    }
+    
+    .conteudo-principal-botao:first-child{
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 425px){
+
+    #conteudo-principal-titulo{
+        font-size: 52px;
+    }
+
+    #conteudo-principal-msg{
+        font-size: 22px;
+        margin-left: 10%;
+    }
+
+    #conteudo-principal-imagem{
+        display: none;
+        visibility: hidden;
+    }
+
+    #conteudo-secundario-lista{
+        margin-left: 8%;
+    }
+
+    #header-nav{
+        display: none;
+        visibility: hidden;
+    }
+
+    #header-nav.active{
+        padding-top: 20px;
+        display: flex;
+        visibility: visible;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 18%;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        transition: .7s;
+        background: rgba(9, 16, 70, 0.897);
+    }
+
+    #botao-mobile{
+        visibility: visible;
+        display: flex;
+    }
+
+    #hamburguer{
+        border-top: 2px solid rgb(255, 255, 255);
+        width: 23px;
+    }
+
+    #hamburguer::after, #hamburguer::before{
+        content: "";
+        display: block;
+        width: 23px;
+        height: 2px;
+        background: rgb(255, 255, 255);
+        margin-top: 5px;
+    }
+
+    #botao-mobile.active #hamburguer{
+        border-top-color: transparent;
+        position: absolute;
+        top: 7%;
+        right: 22%;
+    }
+
+    #botao-mobile.active #hamburguer::before{
+        transform: rotate(135deg);
+        transition: .7s;
+        position: absolute;
+    }
+
+    #botao-mobile.active #hamburguer::after{
+        transform: rotate(-135deg);
+        transition: .7s;
+        position: absolute;
+    }
+}

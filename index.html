@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um Bot que irá adicionar vibe e música ao seu servidor do Discord.">
+    <link rel="stylesheet" href="style.css">
+    <title>Luna Bot - a melhor bot de música do Discord</title>
+    <link rel="shortcut icon" href="img/Bot-image.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="animate__animated animate__slideInDown">
+    <header class="header-container">
+        <img class="header-imagem" src="img/musica.png" alt="logo música">
+        <button id="botao-mobile">
+            <span id="hamburguer"></span>
+        </button>
+        <nav id="header-nav">
+            <a class="nav-item" href="index.html">Home</a>
+            <a class="nav-item" onclick="alert('Esta página ainda não foi desenvolvida.')" href="#">Tutorial</a>
+            <a class="nav-item" onclick="alert('Esta página ainda não foi desenvolvida.')" href="#">Contato</a>
+            <a class="nav-item" onclick="alert('Esta página ainda não foi desenvolvida.')" href="#">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="conteudo">
+            <div class="conteudo-principal">
+                <h1 id="conteudo-principal-titulo">Luna Bot</h1>
+                <h2 id="conteudo-principal-msg">A melhor Bot de música do Discord.</h2>
+                <div id="conteudo-principal-container-botoes">
+                    <button class="conteudo-principal-botao">Me adicione</button>
+                    <button class="conteudo-principal-botao">Saiba Mais</button>
+                </div>
+            </div>
+            <img id="conteudo-principal-imagem" src="img/Bot-image.png" alt="Imagem da Luna Bot">
+        </div>
+
+        <div class="conteudo-secundario">
+            <h3 id="conteudo-secundario-titulo">O que a Luna Bot faz por voce?</h3>
+            <ol id="conteudo-secundario-lista">
+                <li class="lista-item">Dá um <strong>toque especial</strong> ao seu servidor.</li>
+                <li class="lista-item">Apresenta as <strong>melhores músicas</strong> para o seu perfil.</li>
+                <li class="lista-item">Tem suporte ao <strong>Youtube, SoundCloud, Spotify, Twitter, Insta, Vimeo</strong>, etc.</li>
+            </ol>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <h2 id="rodape-titulo">Luna Bot</h2>
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>
